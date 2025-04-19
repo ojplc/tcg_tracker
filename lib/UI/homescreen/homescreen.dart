@@ -17,7 +17,7 @@ class Homescreen extends StatelessWidget {
 
       appBar: AppBar(
         title: Text(
-          "Aplicativo cis",
+          "TCGP tracker",
           style: TextStyle(color: AppColors.lightColor),
         ),
         backgroundColor: AppColors.mainColor,

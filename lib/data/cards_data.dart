@@ -7,12 +7,29 @@ import 'package:tcg_tracker/model/pokecard.dart';
 class CardsData extends ChangeNotifier {
   List<Pokecard> cartas = [];
 
+  Map<String, dynamic> cartasPacote = {};
+
+  Future<void> getPacotes() async{
+    String jsonStringPacote = await rootBundle.loadString("assets/sets.json");
+    List<dynamic> dataPacote = json.decode(jsonStringPacote);
+
+    for (var pacoteInfo in dataPacote) {
+      cartasPacote[pacoteInfo["code"]] = [];
+    }
+  }
+
   Future<void> getCartas() async {
-    String jsonString = await rootBundle.loadString("assets/cards.json");
-    List<dynamic> data = json.decode(jsonString); //json começa com []
+    String jsonStringCartas = await rootBundle.loadString("assets/cards.json");
+    List<dynamic> data = json.decode(jsonStringCartas); //json começa com []
+
+    await getPacotes();
 
     for (var dadosCartas in data) {
-      cartas.add(Pokecard.fromMap(dadosCartas));
+      Pokecard cartaAtual = Pokecard.fromMap(dadosCartas);
+      cartas.add(cartaAtual);
+
+      cartasPacote[cartaAtual.set].add(cartaAtual);
     }
+    print(cartasPacote);
   }
 }
