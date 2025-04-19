@@ -9,7 +9,7 @@ class CardsData extends ChangeNotifier {
 
   Map<String, dynamic> cartasPacote = {};
 
-  Future<void> getPacotes() async{
+  Future<void> getPacotes() async {
     String jsonStringPacote = await rootBundle.loadString("assets/sets.json");
     List<dynamic> dataPacote = json.decode(jsonStringPacote);
 
@@ -30,6 +30,5 @@ class CardsData extends ChangeNotifier {
 
       cartasPacote[cartaAtual.set].add(cartaAtual);
     }
-    print(cartasPacote);
   }
 }

@@ -1,3 +1,5 @@
+// Representa um widget de uma carta individual
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:tcg_tracker/UI/core/app_colors.dart';
