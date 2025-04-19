@@ -9,14 +9,15 @@ import 'package:tcg_tracker/model/pokecard.dart';
 
 class ExpansaoWidget extends StatelessWidget {
   final String nomeExpansao;
-  
+
   const ExpansaoWidget({super.key, required this.nomeExpansao});
 
   @override
   Widget build(BuildContext context) {
-  CardsData cardsData = Provider.of<CardsData>(context);
+    CardsData cardsData = Provider.of<CardsData>(context);
 
-  List<dynamic> cartasDessaExpansao = cardsData.cartasPacote[nomeExpansao.toString()];
+    List<dynamic> cartasDessaExpansao =
+        cardsData.cartasPacote[nomeExpansao.toString()];
     return ExpansionTile(
       title: Text(
         nomeExpansao.toString(),
