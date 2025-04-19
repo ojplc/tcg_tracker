@@ -29,7 +29,7 @@ class Homescreen extends StatelessWidget {
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent:
                 MediaQuery.of(context).size.width *
-                0.3, //muda aqui para mudar a quantidade
+                0.4, //muda aqui para mudar a quantidade
             //de elementos por fileira
             childAspectRatio: 0.6,
           ),
@@ -37,8 +37,8 @@ class Homescreen extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 8.0,
-                vertical: 3.0,
+                horizontal: 5.0,
+                vertical: 2.0,
               ),
               child: HomePokecard(pokecard: cardsData.cartas[index]),
             );
