@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:tcg_tracker/UI/core/app_colors.dart';
 import 'package:tcg_tracker/UI/widgets/home_pokecard.dart';
 import 'package:tcg_tracker/data/cards_data.dart';
-import 'package:tcg_tracker/model/pokecard.dart';
 
 class ExpansaoWidget extends StatelessWidget {
   final String nomeExpansao;

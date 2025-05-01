@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tcg_tracker/UI/core/app_colors.dart';
 import 'package:tcg_tracker/UI/widgets/expansao_widget.dart';
-import 'package:tcg_tracker/UI/widgets/home_pokecard.dart';
 import 'package:tcg_tracker/data/cards_data.dart';
-import 'package:tcg_tracker/model/pokecard.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -26,6 +24,7 @@ class Homescreen extends StatelessWidget {
       ),
 
       body: ListView(
+        physics: NeverScrollableScrollPhysics(),
         children: List.generate(nomesExpansoesDisponiveis.length, (index) {
           return ExpansaoWidget(nomeExpansao: nomesExpansoesDisponiveis[index]);
         }),
