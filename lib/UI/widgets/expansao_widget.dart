@@ -23,6 +23,27 @@ class ExpansaoWidget extends StatelessWidget {
         style: TextStyle(color: AppColors.lightColor, fontSize: 20),
       ),
       children: [
+        InkWell(
+          highlightColor: AppColors.mainColor,
+          borderRadius: BorderRadius.horizontal(
+            left: Radius.circular(20.0),
+            right: Radius.circular(20.0),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 20.0,
+              child: Text(
+                "Adicionar todas as cartas do conjunto",
+                style: TextStyle(color: AppColors.lightColor),
+              ),
+            ),
+          ),
+          onTap: () {
+            //to-do
+          },
+        ),
+        SizedBox(height: 20.0),
         SizedBox(
           height: MediaQuery.of(context).size.height * 1.0,
           child: GridView.builder(
