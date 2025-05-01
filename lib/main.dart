@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:tcg_tracker/UI/homescreen/homescreen.dart';
 import 'package:tcg_tracker/data/cards_data.dart';
@@ -6,6 +7,10 @@ import 'package:tcg_tracker/data/cards_data.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); //garante que a parte asincrona sera carregada antes
   //de iniciar a aplicação
+
+  await Hive.initFlutter();
+  // "set-number"
+  var pokecardBox = await Hive.openBox("pokecardBox");
 
   CardsData cardsData = CardsData();
   await cardsData.getCartas();
