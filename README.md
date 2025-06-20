@@ -1,16 +1,9 @@
-# tcg_tracker
+# tcg tracker
 
-A new Flutter project.
+Projeto flutter de aplicativo para marcar cartas já adquiridas no jogo pokémon TCG Pocket
 
-## Getting Started
+## Aprendizados
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Uso de banco da dados HIVE para salvar cartas já adquiridas
+- Aplicação de ExpansionTile para criar blocos autogerados das cartas separadas por expansão
+- Aplicação da linguagem dart para criar front-end da aplicação
